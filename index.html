@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тур "Безпечний берег півдня" - Все включено!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Comfortaa', cursive;
+    }
+
+    header {
+      background: url('pivdennyi-buh.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #91c4a5;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 160px 20px 120px;
+    }
+
+    .highlight {
+      background: linear-gradient(to bottom, white, #b3e6f5);
+    }
+
+    .section-alt {
+      background: linear-gradient(to bottom, white, #91c4a5);
+    }
+
+    .accent {
+      color: #fbb470;
+    }
+
+    .tour {
+      border: 2px solid #91c4a5;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fefcf9;
+    }
+
+    .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 100px;
+      padding: 150px;
+      background: linear-gradient(to left, #ffffff, #eed582);
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-gallery img {
+      flex: 0 0 auto;
+      width: 350px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #d6a54a;
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #b3e6f5;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .price-table th {
+      background-color: #fbb470;
+      color: white;
+      padding: 12px;
+    }
+
+    .price-table td {
+      background-color: white;
+      padding: 10px;
+      border-top: 2px solid #b3e6f5;
+    }
+
+    .btn {
+      background-color: #fbb470;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form input,
+    form textarea {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      font-family: 'Comfortaa', cursive;
+      border: 2px solid #91c4a5;
+      border-radius: 5px;
+    }
+
+    form {
+      background-color: #fefcf9;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    footer {
+      background-color: #91c4a5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1, h2, h3 {
+        font-size: 1.5em;
+      }
+
+      .scroll-gallery {
+        gap: 50px;
+        padding: 50px;
+      }
+
+      .scroll-gallery img {
+        width: 250px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">Про нас</a>
+    <a href="#tours">Тури</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#pricing">Ціни</a>
+    <a href="#booking">Бронювання</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+
+     <style>
+    body {
+      margin: 0;
+      font-family: 'Comfortaa', cursive;
+    }
+
+    .header 
+    {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-image: url('IMG_copy1.jpg'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4); 
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      justify-content: center;
+    }
+
+    .logo {
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    .title {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1200px) {
+      .header {
+        height: 260px;
+      }
+      .title {
+        font-size: 1.8rem;
+      }
+      .logo {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .header {
+        height: 220px;
+      }
+      .title {
+        font-size: 1.6rem;
+      }
+      .logo {
+        height: 45px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        height: 200px;
+        padding: 0 10px;
+      }
+      .header-content {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .logo {
+        height: 40px;
+        margin-right: 0;
+      }
+      .title {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .title {
+        font-size: 1.2rem;
+      }
+      .logo {
+        height: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <img src="photo_2025-05-26_11-03-55.jpg" alt="Логотип" class="logo"> 
+      <div class="title">Безпечний берег півдня</div>
+    </div>
+  </header>
+
+  <section id="about" class="highlight">
+    <h2>Про нас</h2>
+    <p>Запрошуємо вас у захопливу подорож до Південноукраїнська — місця, де природа вражає, час сповільнюється, а душа відпочиває.</p>
+
+  <p>🏞 <strong>Природа, річка, скелі та мальовничі міста:</strong><br>
+  Тут Південний Буг протікає між скелями, створюючи унікальний та мальовничий вид, ці пейзажі залишаються в серці назавжди. Маршрути проходять повз унікальні місця, оглядові майданчики та затишні місця для купання.</p>
+
+  <p>🛡 <strong>Територія спокою і безпеки:</strong><br>
+  Ми розуміємо, як важливо сьогодні мати змогу відпочити по-справжньому.<br>
+  Південноукраїнськ — це регіон, де панує мир і спокій. Тут немає бойових дій, а спокій — не лише у природі, а й у повсякденному житті.<br>
+  Ваш відпочинок буде захищеним на всіх рівнях — як зовні, так і всередині.</p>
+
+  <p>🚶‍♂️ <strong>Активний відпочинок для душі й тіла:</strong><br>
+  Піші прогулянки, рафтинг по річці, катамарани, квадроцикли, екскурсії, їжа на вогні, фотосафарі, спорт на світанку чи просто тиша в гамаку — кожен обирає свій ритм. Групи невеликі, а гіди — досвідчені й турботливі.</p>
+
+  <p>🧒 <strong>Формат для всієї родини:</strong><br>
+  Цей тур — чудовий вибір і для сімей із дітьми. Поки дорослі насолоджуються природою, SPA-процедурами, тишею чи активностями, діти можуть весело і безпечно проводити час з професійними аніматорами. У нас передбачена дитяча програма, ігри, творчі майстер-класи та активності на свіжому повітрі.</p>
+
+  <p>🍽 <strong>Все включено — від сніданку до заходу сонця:</strong><br>
+   • Комфортне проживання в затишних номерах з усіма зручностями<br>
+   • Смачне домашнє 3-разове харчування<br>
+   • Дитяча анімація та дозвілля<br>
+   • Усі трансфери та супровід<br>
+   • Щоденні програми на вибір<br>
+   • Фото- та відеозвіт з туру<br>
+   • Доброзичлива команда, яка дбає про кожного гостя</p>
+
+  <hr style="margin: 1.5em 0;">
+
+  <p><strong>Просто приїздіть — ми вже про все подбали</strong></p>
+
+  <p>🌅 Відпочинок без тривоги.<br>
+  🌿 Природа без меж.<br>
+  👨‍👩‍👧‍👦 Простір і для дітей, і для себе.<br>
+  🧭 Враження без перевантаження.</p>
+
+  <p><strong>«Безпечний берег півдня» — там, де можна дійсно перевести подих.</strong></p>
+</div>
+    </ul>
+  </section>
+
+  <section id="tours" class="section-alt">
+    <h2>Наші Тури</h2>
+    <div class="tour">
+      <h3 class="accent">Тур на 3 дні — Швидке перезавантаження</h3>
+      <p><strong>Ідеальний варіант для тих, хто хоче втекти від міської метушні навіть на кілька днів.
+На вас чекають прогулянки річкою, екскурсії до найгарніших куточків природи, веселе караоке та затишні вечори в гармонії.
+Для дітей — простора кімната з іграми та анімацією. Коротко, яскраво й зі смаком!</p>
+    </div>
+    <div class="tour">
+      <h3 class="accent">Тур на 5 днів — Баланс відпочинку та пригод</h3>
+      <p><strong>П’ятиденна мандрівка подарує і спокій, і драйв.
+У програмі: сплави по річці, пейнтбол, захопливі екскурсії, караоке-вечори та повне перезавантаження серед природи.
+Дитяча кімната — чудовий простір для найменших, а для дорослих — час для відпочинку та розваг.</p>
+    </div>
+    <div class="tour">
+      <h3 class="accent">Тур на 7 днів — Тиждень у гармонії</h3>
+      <p><strong>Це справжня пригода на цілий тиждень!
+Ви матимете змогу насолодитися повним спектром активностей: прогулянки й рафтинг, пейнтбол, мальовничі локації, вечори біля вогнища, караоке та щоденні миті гармонії з природою.
+Діти будуть у захваті від ігор та анімацій у спеціально облаштованій кімнаті.
+Цей тур — найкращий спосіб відновити сили та наповнитись енергією.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="highlight">
+    <h2>Галерея</h2>
+    <div class="scroll-gallery">
+      <img src="photo_1_2025-07-02_19-31-22.jpg" alt="Фото 1">
+      <img src="photo_2_2025-07-02_19-31-22.jpg" alt="Фото 2">
+      <img src="photo_3_2025-07-02_19-31-22.jpg" alt="Фото 3">
+      <img src="photo_4_2025-07-02_19-31-22.jpg" alt="Фото 4">
+      <img src="photo_5_2025-07-02_19-31-22.jpg" alt="Фото 5">
+      <img src="photo_6_2025-07-02_19-31-22.jpg" alt="Фото 6">
+      <img src="photo_7_2025-07-02_19-31-22.jpg" alt="Фото 7">
+      <img src="photo_9_2025-07-02_19-31-22.jpg" alt="Фото 9">
+      <img src="photo_10_2025-07-02_19-31-22.jpg" alt="Фото 10">
+      <img src="photo_11_2025-07-02_19-31-22.jpg" alt="Фото 11">
+      <img src="photo_12_2025-07-02_19-31-22.jpg" alt="Фото 12">
+      <img src="photo_13_2025-07-02_19-31-22.jpg" alt="Фото 13">
+      <img src="photo_14_2025-07-02_19-31-22.jpg" alt="Фото 14">
+      <img src="photo_15_2025-07-02_19-31-22.jpg" alt="Фото 15">
+      <img src="photo_16_2025-07-02_19-31-22.jpg" alt="Фото 16">
+      <img src="photo_17_2025-07-02_19-31-22.jpg" alt="Фото 17">
+      <img src="photo_18_2025-07-02_19-31-22.jpg" alt="Фото 18">
+      <img src="photo_19_2025-07-02_19-31-22.jpg" alt="Фото 19">
+      <img src="photo_20_2025-07-02_19-31-22.jpg" alt="Фото 20">
+      <img src="photo_21_2025-07-02_19-31-22.jpg" alt="Фото 21">
+      <img src="photo_22_2025-07-02_19-31-22.jpg" alt="Фото 22">
+      <img src="photo_23_2025-07-02_19-31-22.jpg" alt="Фото 23">
+      <img src="photo_24_2025-07-02_19-31-22.jpg" alt="Фото 24">
+      <img src="photo_25_2025-07-02_19-31-22.jpg" alt="Фото 25">
+      <img src="photo_26_2025-07-02_19-31-22.jpg" alt="Фото 26">
+    </div>
+  </section>
+
+ <section id="pricing" class="highlight">
+  <h2>Ціни</h2>
+
+  <div class="table-wrapper">
+    <table class="price-table" role="table">
+      <thead>
+        <tr>
+          <th>Тур</th>
+          <th>Тривалість</th>
+          <th>Ціна</th>
+          <th>Включено</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Швидке перезавантаження</td>
+          <td>3 дні</td>
+          <td>Дорослий 3600 грн, дитячий 2700</td>
+          <td>Проживання, харчування, супровід</td>
+        </tr>
+        <tr>
+          <td>Баланс відпочинку та пригод</td>
+          <td>5 днів</td>
+          <td>Дорослий 6000 грн, дитячий 4500</td>
+          <td>Проживання, харчування, супровід</td>
+        </tr>
+        <tr>
+          <td>Тиждень у гармонії</td>
+          <td>7 днів</td>
+          <td>Дорослий 7700 грн, дитячий 5600</td>
+          <td>Проживання, харчування, супровід</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section id="booking" class="highlight">
+  <div class="form-container">
+    <h2>Забронювати тур</h2>
+    <form action="https://formspree.io/f/xldldpld" method="POST">
+      <label for="name">Ваше ім’я</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="phone">Номер телефону</label>
+      <input type="tel" name="phone" id="phone" required>
+
+      <label for="email">Ваш Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="message">Повідомлення</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Забронювати</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  #booking {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #booking h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Comfortaa', sans-serif;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+  }
+
+  label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #3cae7c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Comfortaa', sans-serif;
+  }
+
+  .btn:hover {
+    background-color: #32986a;
+  }
+
+  /* Адаптивність */
+  @media (max-width: 1200px) {
+    .form-container {
+      max-width: 600px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .form-container {
+      max-width: 500px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-container {
+      max-width: 90%;
+      padding: 20px;
+    }
+
+    #booking h2 {
+      font-size: 1.5rem;
+    }
+
+    input,
+    textarea {
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    input,
+    textarea {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
+
+  <section id="contact" class="highlight">
+    <h2>Контакти</h2>
+    <p><strong>Адреса:</strong> Південноукраїнськ, Миколаївська область</p>
+    <p><strong>Телефон:</strong> +38 (068) 280-18-46</p>
+    <p><strong>Email:</strong> safeshoresouth@gmail.com</p>
+    <h3>Місцезнаходження туру</h3>
+  <a 
+    href="https://maps.app.goo.gl/myMw9wBVjHmwpdH68" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: inline-block; padding: 12px 20px; background-color: #3cae7c; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+    Відкрити в Google Maps
+  </a>
+</div>
+  </section>
+
+  <footer>
+    <p>© 2025 Туристичні тури по Південному Бугу. Всі права захищені.</p>
+  </footer>
+</body>
+</html>
